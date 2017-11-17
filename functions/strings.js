@@ -25,52 +25,57 @@ const deepFreeze = require('deep-freeze');
 
 const categories = [
   {
-    "category": "headquarters",
-    "suggestion": "Headquarters",
+    "category": "bio",
+    "suggestion": "Biography",
     "facts": [
-      "Google's headquarters is in Mountain View, California.",
-      "Google has over 30 cafeterias in its main campus.",
-      "Google has over 10 fitness facilities in its main campus."
+      "Alena is a graduate student at Tufts University.",
+      "Alena is pursuing a Master's degree in computer science.",
+      "Alena is from Moscow, Russia.",
+      "Alena speaks English, Russian and Japanese.",
+      "Alena was born on December 7th 1993.",
+      "In 2014, Alena studied abroad in Japan."
     ],
-    "factPrefix": "Okay, here's a headquarters fact."
+    "factPrefix": "Okay, here's a fact about Alena."
   },
   {
-    "category": "history",
-    "suggestion": "History",
+    "category": "fun",
+    "suggestion": "Fun Facts",
     "facts": [
-      "Google was founded in 1998.",
-      "Google was founded by Larry Page and Sergey Brin.",
-      "Google went public in 2004.",
-      "Google has more than 70 offices in more than 40 countries."
+      "Alena's favorite color is purple.",
+      "Alena is obsessed with penguins.",
+      "Alena recently learned how to crochet.",
+      "This year, Alena finally became gold in League of Legends.",
+      "Over the summer Alena built her own PC.",
+      "Last year Alena learned how to play Magic."
     ],
-    "factPrefix": "Sure, here's a history fact."
+    "factPrefix": "Yay, here's a fun fact about Alena!"
   }
 ];
 
 const content = {
-  "images": [
-    [
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_GSA.2e16d0ba.fill-300x300.png",
-      "Google app logo"
-    ],
-    [
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Logo.max-900x900.png",
-      "Google logo"
-    ],
-    [
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinosaur-skeleton-at-Google.max-900x900.jpg",
-      "Stan the Dinosaur at Googleplex"
-    ],
-    [
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Wide-view-of-Google-campus.max-900x900.jpg",
-      "Googleplex"
-    ],
-    [
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Bikes-on-the-Google-campus.2e16d0ba.fill-300x300.jpg",
-      "Biking at Googleplex"
-    ]
-  ],
-  "link": "https://www.google.com/about/"
+  // "images": [
+  //   [
+  //     "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_GSA.2e16d0ba.fill-300x300.png",
+  //     "Google app logo"
+  //   ],
+  //   [
+  //     "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Logo.max-900x900.png",
+  //     "Google logo"
+  //   ],
+  //   [
+  //     "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinosaur-skeleton-at-Google.max-900x900.jpg",
+  //     "Stan the Dinosaur at Googleplex"
+  //   ],
+  //   [
+  //     "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Wide-view-of-Google-campus.max-900x900.jpg",
+  //     "Googleplex"
+  //   ],
+  //   [
+  //     "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Bikes-on-the-Google-campus.2e16d0ba.fill-300x300.jpg",
+  //     "Biking at Googleplex"
+  //   ]
+  // ],
+  "link": "https://folofl.github.io/"
 };
 
 const cats = {
@@ -99,16 +104,16 @@ const cats = {
 
 const transitions = {
   "content": {
-    "heardItAll": "Looks like you've heard all there is to know about the %s of Google. I could tell you about its %s instead.",
+    "heardItAll": "Looks like you've heard all the facts about Alena's %s. I could tell you some %s instead.",
     "alsoCats": "By the way, I can tell you about cats too."
   },
   "cats": {
-    "heardItAll": "Looks like you've heard all there is to know about cats. Would you like to hear about Google?"
+    "heardItAll": "Looks like you've heard all there is to know about cats. Would you like to hear about Alena?"
   }
 };
 
 const general = {
-  "heardItAll": "Actually it looks like you heard it all. Thanks for listening!",
+  "heardItAll": "Actually it looks like you that's all the info I have. Thanks for listening!",
   /** Used to give responses for no inputs */
   "noInputs": [
     "I didn't hear that.",
@@ -125,7 +130,9 @@ const general = {
   "nextFact": "Would you like to hear another fact?",
   "linkOut": "Learn more",
   "wantWhat": "So what would you like to hear about?",
-  "unhandled": "Welcome to Facts about Google! I'd really rather not talk about %s. Wouldn't you rather talk about Google? I can tell you about Google's history or its headquarters. Which do you want to hear about?"
+  "unhandled": "Welcome to Facts about Alena! I'd really rather not talk \
+                about %s. Wouldn't you rather talk about Alena? I promise \
+                she's not making me say this. So, which do you want to hear about?"
 };
 
 // Use deepFreeze to make the constant objects immutable so they are not unintentionally modified
